@@ -1,16 +1,15 @@
 package presentation;
-
 import java.io.*;import java.lang.reflect.*;
 import java.util.Scanner; import metier.IMetier;
 import dao.IDao;
-
 public class Presentation {
     public static void main(String[] args) {
+          //methode classique
 //        DaoImpl dao=new DaoImpl();
 //        MetierImpl metier=new MetierImpl();
 //        metier.setDao(dao);
 //        System.out.println(metier.calcul());
-
+        //methode dynamique en lisant les noms des classes à utiliser depuis config.txt
         try {
             Scanner scanner=new Scanner(new File("src/config.txt"));
             String daoClassname=scanner.next();
