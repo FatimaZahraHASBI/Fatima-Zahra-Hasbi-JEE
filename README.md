@@ -1,5 +1,5 @@
 # Fatima-Zahra-Hasbi-JEE
-## This repository contains all my JEE academic projects and exercices
+## This repository contains all my JEE academic projects and exercises
 
 Each folder contain a report about the project. Here you find the links to each report: 
 
