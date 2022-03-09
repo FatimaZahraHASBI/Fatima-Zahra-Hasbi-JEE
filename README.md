@@ -15,8 +15,6 @@ Each folder contain a report about the project. Here you find the links to each 
  ● TP4 : Mapping des associations et de l'héritage en JPA Hibernate Spring Dataa <br />
  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;[Compte rendu 4](https://github.com/FatimaZahraHASBI/Fatima-Zahra-Hasbi-JEE/blob/master/tp4-jpa-hospital/Rapport%204-%20HASBI.pdf)
  
- 
-![image](https://user-images.githubusercontent.com/63150702/157491859-841c65d5-9fb5-4770-8279-cb8b2b9e914c.png)
-
- 
-
+![1_PBTTH5RGrfT1RBXxr989XQ__1_-removebg-preview](https://user-images.githubusercontent.com/63150702/157494447-6286f40b-0a32-4ca8-b83f-7ff8e568cd4b.png)
+![157001041-a30bd1b7-5ef4-4247-85c4-b8d24bcc1c5b](https://user-images.githubusercontent.com/63150702/157492992-638e53ef-dfaa-42c4-9fe8-7b5d7f1a8297.png)
+![157001036-b8d2af60-ffff-47e3-bdad-2050e11dde8a](https://user-images.githubusercontent.com/63150702/157493055-78583af1-a40f-4868-a4cd-243a19207611.png)
