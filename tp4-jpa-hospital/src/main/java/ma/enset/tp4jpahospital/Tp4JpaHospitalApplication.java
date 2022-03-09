@@ -16,12 +16,9 @@ import java.util.stream.Stream;
 
 @SpringBootApplication
 public class Tp4JpaHospitalApplication {
-
     public static void main(String[] args) {
-
         SpringApplication.run(Tp4JpaHospitalApplication.class, args);
     }
-
     @Bean
     CommandLineRunner start(IHospitalService hospitalService, PatientRepository patientRepository, RendezVousRepository rendezVousRepository, MedecinRepository medecinRepository){
         return args -> {
@@ -33,7 +30,6 @@ public class Tp4JpaHospitalApplication {
                         patient.setMalade(false);
                         hospitalService.savePatient(patient);
                     });
-
             Stream.of("Laila", "Achraf", "Noureddine")
                     .forEach(name->{
                         Medecin medecin=new Medecin();
@@ -42,7 +38,6 @@ public class Tp4JpaHospitalApplication {
                         medecin.setEmail(name+"@gmail.com");
                         hospitalService.saveMedecin(medecin);
                     });
-
             Patient patient=patientRepository.findById(1L).orElse(null);
             Patient patient1=patientRepository.findByNom("Fatima Zahra");
 
