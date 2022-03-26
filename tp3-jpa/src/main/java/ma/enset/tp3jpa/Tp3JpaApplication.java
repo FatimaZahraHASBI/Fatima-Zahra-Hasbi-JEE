@@ -24,7 +24,7 @@ public class Tp3JpaApplication implements CommandLineRunner {
         System.out.println("------------------------------------------------------------------------------------");
 
         //Filling the database with random data
-        for (int i=0;i<100;i++){
+        for (int i=0;i<20;i++){
             patientRepository.save(new Patient(null,"Fatima Zahra",new Date(), Math.random() < 0.5,44));
         }
 

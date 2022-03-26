@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<header style="background: lightblue ; color: rgba(0,0,0,0.46); padding: 3px">
+    <nav style="min-height: 1vh; display: flex; align-items: center; width: 98%; margin: auto; padding: 1rem">
+        <h3 style="flex: 4 1 8rem">Fatima Zahra HASBI</h3>
+        <ul style="display: flex; flex: 1 1 8rem; justify-content: space-around; align-items: center; list-style: none">
+            <li><a th:href="index" style="color: #143ffd; text-decoration: none">Home</a></li>
+            <li><a th:href="index" style="color: #143ffd; text-decoration: none">Les patients</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container mt-5">
+    <div class="card-header"><h3>Liste des patients</h3></div>
+    <div class="card-body mt-2">
+        <form method="get" th:action="@{index}" class="mt-2">
+            <label>Key word</label>
+            <input type="text" name="keyword" th:value="${keyword}">
+            <button type="submit" class="btn btn-info">Chercher</button>
+        </form>
+        <table class="table mt-4">
+            <thead>
+            <tr style="color: indigo">
+                <th>ID</th><th>Nom</th><th>Date</th><th>Malade</th><th>Score</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="p:${patientList}">
+                <td style="color: blue" th:text="${p.id}"></td>
+                <td th:text="${p.nom}"></td>
+                <td th:text="${p.getDateNaissance()}"></td>
+                <td th:text="${p.malade}"></td>
+                <td th:text="${p.score}"></td>
+                <td>
+                    <a class="btn btn-danger" th:href="@{delete(id=${p.id}, keyword=${keyword}, page=${currentPage})}">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <ul class="nav nav-pills">
+            <li th:each="page,status:${pages}">
+                <a th:class="${status.index==currentPage?'btn btn-info ms-1':'btn btn-outline-info ms-1'}"
+                   th:text="${status.index}"
+                   th:href="@{/index(page=${status.index})}"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
