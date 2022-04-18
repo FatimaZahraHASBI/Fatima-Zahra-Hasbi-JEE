@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="template1">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Etudiants</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+<div layout:fragment="content1">
+    <div class="col-md-6 offset-3">
+        <form method="post" th:action="@{/admin/save}">
+            <div>
+                <label for="nom">Nom</label>
+                <input id="nom" class="form-control" type="text" name="nom" th:value="${etudiant.nom}">
+                <span class="text-danger" th:errors="${etudiant.nom}"></span>
+            </div>
+            <div>
+                <label for="prenom">Prénom</label>
+                <input id="prenom" class="form-control" type="text" name="prenom" th:value="${etudiant.prenom}">
+                <span class="text-danger" th:errors="${etudiant.prenom}"></span>
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input id="email" class="form-control" type="text" name="email" th:value="${etudiant.email}">
+                <span class="text-danger" th:errors="${etudiant.email}"></span>
+            </div>
+            <div>
+                <label>Date Naissance</label>
+                <input class="form-control" type="date" name="dateNaissance" th:value="${etudiant.dateNaissance}">
+                <span class="text-danger" th:errors="${etudiant.dateNaissance}"></span>
+            </div>
+            <div class="form-group">
+                <div th:each="model : ${T(com.example.tp8_etud_spring_mvc_jpa_security.entities.Genre).values()}">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" th:field="*{etudiant.genre}" th:value="${model}" class="custom-control-input">
+                        <label class="custom-control-label" th:for="${#ids.prev('genre')}" th:text="${model}">model</label>
+                        <span class="text-danger" th:errors="${etudiant.genre}"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="mySwitch" name="enregle" th:value="${etudiant.enRegle}" th:checked="${etudiant.enRegle}">
+                <label class="form-check-label" for="mySwitch">En règle</label>
+                <span class="text-danger" th:errors="${etudiant.enRegle}"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
