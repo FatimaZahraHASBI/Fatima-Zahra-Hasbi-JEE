@@ -21,11 +21,11 @@ Each folder contain a report about the project. Here you find the links to each 
  ● TP6 : Mini Projet Framework d'Injection des dépendances <br />
  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;[Rapport de mini projet](https://github.com/FatimaZahraHASBI/Fatima-Zahra-Hasbi-JEE/blob/master/tp6-Framework-dependency_injection/Rapport%20mini%20Projet%20-%20Fatima%20Zahra%20HASBI.pdf)
   <br /> <br />
- ● TP7 : Activité Pratique Spring MVC Thymeleaf <br />
+ ● TP7 : Activité Pratique Spring MVC Thymeleaf Les Patients <br />
  &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;[Compte rendu 7](https://github.com/FatimaZahraHASBI/Fatima-Zahra-Hasbi-JEE/blob/master/tp7-demo1-patients-Spring-MVC-Thymeleaf/Rapport-patient%20Spring%20MVC%20thymleaf.pdf)
- 
- 
- 
+  <br /> <br />
+ ● TP8 : Activité Pratique Spring MVC Thymeleaf Les Etudiants <br />
+ &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&nbsp;[Compte rendu 8](https://github.com/FatimaZahraHASBI/Fatima-Zahra-Hasbi-JEE/blob/master/tp8-etud_Spring_MVC_JPA_Security/Rapport%20-%20AP%20etudiants.pdf)
  
 
  
