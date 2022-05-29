@@ -4,18 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity @Data
 @NoArgsConstructor  @AllArgsConstructor
 public class Product {
-    @Id
-    private String id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
-    private double price;
-    private double quantity;
+    private int price;
+    private int quantity;
     @ManyToOne
     private Category category;
 }

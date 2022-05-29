@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.UUID;
-
+@CrossOrigin("*")
 @RestController
 public class ProductRestController {
     @Autowired
@@ -23,7 +23,7 @@ public class ProductRestController {
     }
 
     @GetMapping(path = "/products/{id}")
-    public Product getProduct(@PathVariable(name = "id") String id){
+    public Product getProduct(@PathVariable(name = "id") int id){
         return productRepository.findById(id).get();
     }
 
@@ -33,13 +33,13 @@ public class ProductRestController {
     }
 
     @PutMapping("/products/{id}")
-    public Product updateProduct(@RequestBody Product product, @PathVariable String id){
+    public Product updateProduct(@RequestBody Product product, @PathVariable int id){
         product.setId(id);
         return productRepository.save(product);
     }
 
     @DeleteMapping("/products/{id}")
-    public void daleteProduct(@PathVariable String id){
+    public void daleteProduct(@PathVariable int id){
         productRepository.deleteById(id);
     }
 

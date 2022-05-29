@@ -22,7 +22,6 @@ public class ProductServiceImpl implements ProductService{
     @Override
     public ProductDTO save(ProductDTO productDTO){
         Product product=catalogMappers.fromProductDTO(productDTO);
-        product.setId(UUID.randomUUID().toString());
         Product savedProduct = productRepository.save(product);
         return catalogMappers.fromProduct(savedProduct);
     }
@@ -36,7 +35,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public ProductDTO getProduct(String id) {
+    public ProductDTO getProduct(int id) {
         Product product = productRepository.findById(id)
                 .orElseThrow(()->new RuntimeException("Product not found"));
         return catalogMappers.fromProduct(product);
@@ -50,7 +49,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void deleteProduct(String id) {
+    public void deleteProduct(int id) {
         productRepository.deleteById(id);
     }
 

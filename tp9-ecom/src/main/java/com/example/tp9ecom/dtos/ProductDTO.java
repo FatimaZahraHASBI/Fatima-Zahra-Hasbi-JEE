@@ -12,9 +12,9 @@ import javax.persistence.ManyToOne;
 @Data
 @NoArgsConstructor  @AllArgsConstructor
 public class ProductDTO {
-    private String id;
+    private int id;
     private String name;
-    private double price;
-    private double quantity;
+    private int price;
+    private int quantity;
     private CategoryDTO categoryDTO;
 }

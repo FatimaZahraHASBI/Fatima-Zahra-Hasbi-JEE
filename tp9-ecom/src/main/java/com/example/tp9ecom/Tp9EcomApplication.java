@@ -29,9 +29,8 @@ public class Tp9EcomApplication {
             categoryRepository.findAll().forEach(cat->{
                 for (int i = 1; i <= 5; i++) {
                     Product product=new Product();
-                    product.setId(UUID.randomUUID().toString());
-                    product.setPrice(100+Math.random()*9000);
-                    product.setQuantity(1+Math.random()*50);
+                    product.setPrice((int) (100+Math.random()*9000));
+                    product.setQuantity((int) (1+Math.random()*50));
                     product.setName(cat.getName()+'-'+i);
                     product.setCategory(cat);
                     productRepository.save(product);

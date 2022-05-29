@@ -9,9 +9,9 @@ public interface ProductService {
 
     List<ProductDTO> listProducts();
 
-    ProductDTO getProduct(String id);
+    ProductDTO getProduct(int id);
 
     ProductDTO updateProduct(ProductDTO productDTO);
 
-    void  deleteProduct(String id);
+    void  deleteProduct(int id);
 }
